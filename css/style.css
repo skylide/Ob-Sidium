@@ -52,3 +52,20 @@
 .titre-page-tiret {
     color:  #e55039;
 }
+
+@media (min-width: 0px) {
+    .navbar-bg, .titre-page-bg-1 {
+        display: none;
+    }
+}
+@media (min-width: 576px) {
+    .navbar-bg, .titre-page-bg-1 {
+        display: initial;
+    }
+}
+@media (min-width: 768px) { 
+}
+@media (min-width: 992px) { 
+}
+@media (min-width: 1200px) {    
+}
