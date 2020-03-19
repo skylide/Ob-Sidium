@@ -4,3 +4,19 @@
     left: 25%;
     display: none;
 }
+.header-c-1 {
+    background-color: #E53935;
+}
+.logo-1 {
+    display: none;
+}
+.navbar-perso {
+    background-color: #FFB300;
+    border: 0px;
+    border-bottom: 4px;
+    border-style: solid;
+    border-color: #e55039;
+}
+.navbar-perso a,.fa ,.fab {
+    color: white;
+}
