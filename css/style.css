@@ -7,8 +7,13 @@
 .header-c-1 {
     background-color: #E53935;
 }
+.navbar-bg {
+    position: absolute;
+    z-index: 0;
+    left: -150px;
+}
 .logo-1 {
-    display: none;
+    z-index: 1;
 }
 .navbar-perso {
     background-color: #374046;
@@ -20,3 +25,6 @@
 .navbar-perso a,.fa ,.fab {
     color: white;
 }
+.carousel-inner{
+    max-height: 500px !important;
+  }
