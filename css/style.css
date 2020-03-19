@@ -28,8 +28,17 @@
 .carousel-inner{
     max-height: 500px !important;
   }
+  .titre-page-bg-1 {
+    position: absolute;
+    z-index: -1;
+    left: -50px;
+}
 .titre-page {
-    background-image: url(../img/titre-page.jpeg);
-    background-position: cover;
+    background-color: #374046;
     color: white;
+    z-index: -2;
+    border: 0px;
+    border-bottom: 4px;
+    border-style: solid;
+    border-color: #e55039;
 }
