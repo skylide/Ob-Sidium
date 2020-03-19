@@ -35,10 +35,7 @@
 .fa-circle {
     color: red;
 }
-.carousel-inner{
-    max-height: 500px !important;
-  }
-  .titre-page-bg-1 {
+.titre-page-bg-1 {
     position: absolute;
     z-index: -1;
     left: -50px;
