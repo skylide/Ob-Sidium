@@ -32,6 +32,9 @@
 .navbar-perso a,.fa ,.fab {
     color: white;
 }
+.fa-circle {
+    color: red;
+}
 .carousel-inner{
     max-height: 500px !important;
   }
