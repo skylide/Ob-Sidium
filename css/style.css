@@ -52,6 +52,9 @@
 .titre-page-tiret {
     color:  #e55039;
 }
+.section-2 .row {
+    padding-top: 15px;
+}
 
 @media (min-width: 0px) {
     .navbar-bg, .titre-page-bg-1 {
