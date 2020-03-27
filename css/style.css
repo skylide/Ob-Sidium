@@ -37,14 +37,14 @@
 }
 .titre-page-bg-1 {
     position: absolute;
-    z-index: -1;
     left: -50px;
+    z-index: -1;
 }
 .titre-page {
     background-color: #374046;
     color: white;
-    z-index: -2;
     border: 0px;
+    z-index: 1;
     border-bottom: 4px;
     border-style: solid;
     border-color: #e55039;
@@ -52,8 +52,18 @@
 .titre-page-tiret {
     color:  #e55039;
 }
+.section-2 {
+    background-color: #2F3438;
+}
+.section-2 .container {
+    background-color: #374046;
+    color: white;
+}
 .section-2 .row {
     padding-top: 15px;
+}
+.new-1 {
+    padding-top: 30px;
 }
 
 @media (min-width: 0px) {
