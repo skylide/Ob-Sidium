@@ -69,10 +69,6 @@
 .new-1 {
     padding-top: 30px;
 }
-.btn-news {
-    background-color: #E55039;
-    color: white;
-}
 
 @media (min-width: 0px) {
     .navbar-bg, .titre-page-bg-1 {
