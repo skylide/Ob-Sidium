@@ -72,6 +72,9 @@
 .footer-logo {
     height: 50px;
 }
+.footer-p {
+    padding-left: 50px;
+}
 
 @media (min-width: 0px) {
     .navbar-bg, .titre-page-bg-1 {
