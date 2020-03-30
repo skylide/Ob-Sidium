@@ -1,0 +1,3 @@
+Memos file for php code (changes / danger / warning)
+
+30-03-2020 INFO: Volunteer Project.

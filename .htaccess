@@ -1,0 +1,103 @@
+#_______/\\\\\_______/\\\\\\\\\\\\\____/\\\\_____/\\\\\\\\\\\_________________/\\\__________________________________________        
+# _____/\\\///\\\____\/\\\/////////\\\_\///\\___/\\\/////////\\\______________\/\\\__________________________________________       
+#  ___/\\\/__\///\\\__\/\\\_______\/\\\__/\\/___\//\\\______\///___/\\\________\/\\\___/\\\___________________________________      
+#   __/\\\______\//\\\_\/\\\\\\\\\\\\\\__\//______\////\\\_________\///_________\/\\\__\///___/\\\____/\\\____/\\\\\__/\\\\\___     
+#    _\/\\\_______\/\\\_\/\\\/////////\\\_____________\////\\\_______/\\\___/\\\\\\\\\___/\\\_\/\\\___\/\\\__/\\\///\\\\\///\\\_    
+#     _\//\\\______/\\\__\/\\\_______\/\\\________________\////\\\___\/\\\__/\\\////\\\__\/\\\_\/\\\___\/\\\_\/\\\_\//\\\__\/\\\_   
+#      __\///\\\__/\\\____\/\\\_______\/\\\_________/\\\______\//\\\__\/\\\_\/\\\__\/\\\__\/\\\_\/\\\___\/\\\_\/\\\__\/\\\__\/\\\_  
+#       ____\///\\\\\/_____\/\\\\\\\\\\\\\/_________\///\\\\\\\\\\\/___\/\\\_\//\\\\\\\/\\_\/\\\_\//\\\\\\\\\__\/\\\__\/\\\__\/\\\_ 
+#        ______\/////_______\/////////////_____________\///////////_____\///___\///////\//__\///___\/////////___\///___\///___\///__
+#                                          Copyrights © 2020 EndMove, All Rights Reserved
+
+
+# ADDRESS-WEB/.htaccess
+# version : 1.0
+
+# Processing URI requests
+Options +FollowSymLinks -MultiViews
+
+# Disable file indexing for visitors
+SetEnv REGISTER_GLOBALS 0
+Options -Indexes
+
+# Restrict access to sensitive files
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|inc|bak|tpl)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Maximum time management of file caching
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|webp|gif|swf|css|js)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+</IfModule>
+
+# Managing file caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 7200 seconds"
+    AddType image/x-icon .ico
+    AddType application/x-font-woff .woff
+    AddType application/x-font-woff2 .woff2
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/ico "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/icon "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType text/html "access plus 7200 seconds"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType application/xhtml+xml "access plus 7200 seconds"
+    ExpiresByType application/x-javascript "access plus 1 year"
+    ExpiresByType application/x-shockwave-flash "access plus 1 year"
+    ExpiresByType application/x-font-woff "access plus 1 year"
+    ExpiresByType application/x-font-woff2 "access plus 1 year"
+</IfModule>
+
+# Gzip control
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE image/jpg
+    AddOutputFilterByType DEFLATE image/png
+    AddOutputFilterByType DEFLATE image/webp
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/javascript
+</IfModule>
+
+# Management of different types of errors
+ErrorDocument 400 /
+ErrorDocument 401 /
+ErrorDocument 403 /
+ErrorDocument 404 /
+ErrorDocument 500 /
+ErrorDocument 502 /
+ErrorDocument 503 /
+ErrorDocument 504 /
+
+# ---==== Management of HTTP requests ====---
+
+# Enable URL rewriting
+#RewriteEngine on
+#RewriteCond %{REQUEST_FILENAME} -f [OR]
+#RewriteCond %{REQUEST_FILENAME} -d
+#RewriteRule .* - [L,QSA]
+
+# Redirect the domain to WWW
+#RewriteCond %{HTTP_HOST} !^(.+\.)([a-zA-Z0-9-]+\.([a-z]{2,4})|co\.uk|me\.uk|org\.uk|priv\.no)$
+#RewriteCond %{HTTP_HOST} ([a-zA-Z0-9-]+\.([a-z]{2,4})|co\.uk|me\.uk|org\.uk|priv\.no)$
+#RewriteRule ^(.*)$ http://www.%1/ [L,QSA,R=301]
+
+# Redirect the domain to HTTPS
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+# --> INDEX.PHP
+#RewriteRule ^index/?$ index.php [L,QSA]
