@@ -72,6 +72,11 @@ p {
 .new-1 {
     padding-top: 30px;
 }
+footer {
+    border-top: #334755 10px solid;
+    background-color: #1d2f3a;
+    color: white;
+}
 .footer-logo {
     height: 50px;
 }
